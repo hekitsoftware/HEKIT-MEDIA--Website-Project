@@ -1,8 +1,0 @@
-root{
-    --white: #FAEEE3;
-    --red: #E6384D;
-}
-
-body{
-    color: var(--dark-colour);
-}
