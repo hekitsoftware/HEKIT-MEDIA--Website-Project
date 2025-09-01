@@ -1,0 +1,13 @@
+:root{
+    --white: #faeee3;
+    --red: #E6384D;
+    --orange: #FBA731;
+    --green: #A0C647;
+    --blue: #5084DE;
+    --purple: #B249D2;
+    --mud: #584B53;
+}
+
+body{
+    background-color: var(--mud);
+}
