@@ -15,7 +15,12 @@
 
 body{
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
 }
+
+/* HEADER */
+
 .h-logo{
     max-width: 150px;
     min-width: 100px;
@@ -81,6 +86,149 @@ body{
     color:var(--white);
 }
 
+/* ABOUT */
+
+.about-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    padding-top: 10%;
+}
+.about-image{
+    max-height: 500px;
+    max-width: 500px;
+}
+.about-section{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+#aboutmeheader{
+    font-family: 'JOST-Import';
+    font-weight: normal;
+}
+
+#aboutmetext{
+    font-family: 'JOST-Import';
+    font-weight: normal;
+    font-size: 130%;
+}
+
+/* PROJECTS */
+
+.project-shelf{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5%;
+    margin: 1%;
+    background-size: cover;
+    background-position: center;
+}
+#htfm{
+    background-image: url("images/htfm_bg.jpg");
+    color: #faeee3;
+}
+#portal-mod{
+    background-image: url("images/mche-bg.webp");
+    color: #faeee3;
+}
+#taswell{
+    background-image: url("images/taswell-bg.webp");
+    color: #faeee3;
+}
+#elapse{
+    background-image: url("images/elapse-bg.webp");
+    color: #faeee3;
+}
+#libchess{
+    background-color: #2a2a5c;
+    color: #faeee3;
+}
+
+.project-info{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.project-image{
+    display: flex;
+    max-width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-content: center;
+}
+
+#p-header{
+    font-family: 'JOST-Import';
+    font-weight: bold;
+    margin-bottom: -24px;
+}
+
+#p-desc{
+    font-family: 'JOST-Import';
+    font-weight: bold;
+    margin-bottom: -10px;
+    font-style: normal;
+}
+
+#p-credit{
+    font-family: 'JOST-Import';
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-size: large;
+    font-style: italic;
+}
+
+#p-par{
+    font-family: 'JOST-Import';
+    font-weight: normal;
+}
+
+/* CAT */
+
+.cat-holder {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.catalogue {
+    width: 55%;
+    height: auto;
+    margin-top: 5% auto 0 auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 30px;
+    align-content: center;
+    justify-content: center;
+}
+.catalogue > div {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* LANDING */
 
 .landing-hub{
     display: flex;
@@ -161,20 +309,29 @@ body{
     top: 60px;
 }
 
+/* FOOTER */
 .footer {
+    margin-top: auto;
     display: flex;
-    flex-direction: row-reverse;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
-    text-align: center;
+    justify-content: space-between;
 }
-
 .g-logo{
-    max-width: 7%;
-    min-width: 6%;
-    width: auto;
+    width: 100px;
+    height: auto;
+    max-width: none;
+    padding: 1%;
+    align-self: flex-end;
+
+}
+.footer-love{
+    font-family: 'JOST-Import';
+    color: var(--mud);
+    font-size: small;
+    align-self: flex-end;
     padding: 1%;
 }
