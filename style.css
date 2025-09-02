@@ -8,9 +8,79 @@
     --mud: #584B53;
 }
 
+@font-face{
+    font-family: 'JOST-Import';
+    src: url('fonts/Jost.ttf');
+}
+
 body{
     background-color: var(--white);
 }
+.h-logo{
+    max-width: 150px;
+    min-width: 100px;
+    height: auto;
+    margin-right: 2%;
+    margin-top: 6%;
+}
+
+.topnav{
+    background-color: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 2%;
+    padding-right: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.topnav a{
+    color: #584B53;
+    text-decoration: none;
+    font-size: larger;
+    font-family: 'JOST-Import';
+    padding: 1%;
+}
+
+.topnav:hover{
+    background-color: white;
+}
+
+#home:hover{
+    background-color: transparent;
+  color: rgb(92, 92, 92);
+}
+#about:hover{
+    background-color: transparent;
+  color: #e42037;
+}
+#cat:hover{
+    background-color: transparent;
+  color: #df820a;
+}
+#projects:hover{
+    background-color: transparent;
+  color: #04AA6D;
+}
+#gallery:hover{
+    background-color: transparent;
+  color: var(--blue);
+}
+#extra:hover{
+    background-color: transparent;
+    color: var(--purple);
+}
+
+.topnav a.active {
+    border-radius: 25px;
+    background-color: #584B53;
+    border-color: #584B53;
+    color:var(--white);
+}
+
 
 .landing-hub{
     display: flex;
