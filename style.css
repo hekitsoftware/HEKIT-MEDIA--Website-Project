@@ -55,6 +55,12 @@ body{
     padding: var(--pad-nav);
 }
 
+.landing-header{
+    font-family: 'JOST-Import';
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
 .topnav:hover{
     background-color: white;
 }
