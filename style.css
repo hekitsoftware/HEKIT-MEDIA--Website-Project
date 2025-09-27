@@ -1,0 +1,56 @@
+:root{
+    --base-colour: #0e0618;
+    --base-varient: #2b2630;
+    --sub-text: #37323b;
+    --text-colour: #fffbf7;
+    --accent-colour: #ff0077;
+    font-family: "MAP", sans-serif;
+}
+.darkmode{
+    --base-colour: #fffbf7;
+    --base-varient: #fff2e6;
+    --sub-text: #37323b;
+    --text-colour: #0e0618;
+    --accent-colour: #5500ff;
+    font-family: "MAP", sans-serif;  
+}
+
+@font-face {
+    font-family: 'MAP'; 
+    src: url(/fonts/Jost.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--base-colour);
+    color: var(--text-colour);        
+}
+
+.mode-button{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-varient);
+    fill: var(--text-colour);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
