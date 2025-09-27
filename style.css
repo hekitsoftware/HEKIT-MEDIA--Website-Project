@@ -1,12 +1,12 @@
 :root{
     --base-colour: #0e0618;
     --base-varient: #2b2630;
-    --sub-text: #37323b;
+    --sub-text: #c6c0cc;
     --text-colour: #fffbf7;
     --accent-colour: #ff0077;
     font-family: "MAP", sans-serif;
 }
-.darkmode{
+.lightmode{
     --base-colour: #fffbf7;
     --base-varient: #fff2e6;
     --sub-text: #37323b;
@@ -17,7 +17,10 @@
 
 @font-face {
     font-family: 'MAP'; 
-    src: url(/fonts/Jost.ttf) format('truetype');
+    src: url(fonts/Jost.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -29,6 +32,18 @@ body {
     background-color: var(--base-colour);
     color: var(--text-colour);        
 }
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: var(--sub-text);
+    background-color: transparent;
+    position: relative;
+    margin-top: auto;
+}
+
 
 .mode-button{
     height: 50px;
@@ -54,3 +69,40 @@ body {
 .darkmode #theme-switch svg:last-child{
     display: block;
 }
+
+.l_container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    gap: 0.2rem;
+    padding: 1rem;
+}
+
+#l_header {
+    font-size: clamp(4rem, 8vw, 6rem);
+    font-weight: 800;
+    color: var(--text-colour);
+    margin-bottom: 0.2rem;
+}
+
+#l_navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.landingOption {
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    text-decoration: none;
+    color: var(--text-colour);
+    transition: color 0.3s ease;
+}
+
+.landingOption:hover {
+    color: var(--accent-colour);
+}
+

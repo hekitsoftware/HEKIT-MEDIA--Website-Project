@@ -16,7 +16,7 @@
         </button>
     </div>
 
-    <div id="l_container">
+    <div class="l_container">
         <h1 id="l_header">HEKIT MEDIA</h1>
         <div id="l_navbar">
             <a href="about.html" class="landingOption">About</a>
@@ -27,12 +27,17 @@
             <a href="about.html" class="landingOption">Extra</a>
         </div>
     </div>
+    
+    <div class="footer">
+        <p>This website was made from scratch with 🤍 by Hekit // Kindly hosted by GhandiTheDragon</p>
+    </div>
+
     <script>
         const themeSwitch = document.getElementById('theme-switch');
         const body = document.body;
 
         themeSwitch.addEventListener('click', () => {
-            body.classList.toggle('darkmode');
+            body.classList.toggle('lightmode');
         });
     </script>
 </body>
