@@ -28,24 +28,18 @@
     padding: 0;
 }
 
+html, body {
+    overflow-x: hidden; /* prevents horizontal scroll from pushing content, i think */
+}
+
 body {
     background-color: var(--base-colour);
     color: var(--text-colour);        
 }
 
-.footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
-    color: var(--sub-text);
-    background-color: transparent;
-    position: relative;
-    margin-top: auto;
-}
-
-
-.mode-button {
+@media screen and (min-width: 600px) {
+    /* L/D Mode Button */
+    .mode-button {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -58,76 +52,190 @@ body {
     align-items: center;
     cursor: pointer;
     z-index: 1100;
-}
-#theme-switch svg:last-child{
-    display: none;
-}
-.lightmode #theme-switch svg:first-child{
-    display: none;
-}
-.lightmode #theme-switch svg:last-child{
-    display: block;
+    inset-inline-end: 1rem; /* logical right side */
+    box-sizing: border-box; /* make sure padding is respected */
+    }
+    #theme-switch svg:last-child{
+        display: none;
+    }
+    .lightmode #theme-switch svg:first-child{
+        display: none;
+    }
+    .lightmode #theme-switch svg:last-child{
+        display: block;
+    }
+
+    .footer {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        font-size: clamp(0.8rem, 1.5vw, 1rem);
+        color: var(--sub-text);
+        background-color: transparent;
+        position: relative;
+        margin-top: auto;
+    }
+
+    /*Landing Page */
+    .l_container{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+        gap: 0.2rem;
+        padding: 1rem;
+    }
+
+    #l_header {
+        font-size: clamp(4rem, 8vw, 6rem);
+        font-weight: 800;
+        color: var(--text-colour);
+        margin-bottom: 0.2rem;
+    }
+
+    #l_navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .landingOption {
+        font-size: clamp(1rem, 2vw, 1.5rem); 
+        text-decoration: none;
+        color: var(--text-colour);
+        transition: color 0.2s ease;
+    }
+
+    .landingOption:hover {
+        color: var(--accent-colour);
+    }
+    /* Sticky navbar container */
+    .navbar_container {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--base-colour);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 1rem;
+    }
+    .navbar_container #h_navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .navbar_container #h_navbar-logo{
+        margin-right: 0.5vw; /* space between logo and links */
+        display: flex;
+        padding-left: 0.7rem;
+        padding-right: 1rem;
+        font-size: clamp(1.2rem, 2vw, 1.8rem); 
+        text-decoration: none;
+        color: var(--text-colour);
+        transition: color 0.2s ease;
+    }
+    .navOption {
+        font-size: clamp(1rem, 1.5vw, 1.5rem); 
+        text-decoration: none;
+        color: var(--text-colour);
+        transition: color 0.2s ease;
+        font-weight: normal;
+    }
+    .navOption:hover {
+        color: var(--accent-colour);
+    }
+    #activeTab{
+        color: var(--accent-colour);
+    }
 }
 
-/* LANDING */
-
-.l_container{
+@media screen and (max-width: 599px) {
+    /*L/D button mobil */
+    .mode-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--base-varient);
     display: flex;
     justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    gap: 0.2rem;
-    padding: 1rem;
-}
-
-#l_header {
-    font-size: clamp(4rem, 8vw, 6rem);
-    font-weight: 800;
-    color: var(--text-colour);
-    margin-bottom: 0.2rem;
-}
-
-#l_navbar {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.landingOption {
-    font-size: clamp(1rem, 2vw, 1.5rem); 
-    text-decoration: none;
-    color: var(--text-colour);
-    transition: color 0.2s ease;
-}
-
-.landingOption:hover {
-    color: var(--accent-colour);
-}
-
-/* Sticky navbar container */
-.navbar_container {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--base-colour);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-#h_navbar {
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 1.5rem;
-}
+    cursor: pointer;
+    z-index: 1100;
+    }
+    #theme-switch svg:last-child{
+        display: none;
+    }
+    .lightmode #theme-switch svg:first-child{
+        display: none;
+    }
+    .lightmode #theme-switch svg:last-child{
+        display: block;
+    }
 
-.navOption {
-    font-size: clamp(1rem, 1.5vw, 1.5rem); 
-    text-decoration: none;
-    color: var(--text-colour);
-    transition: color 0.2s ease;
-}
+    .footer {
+    display: none;
+    }
 
+    /* landing mobile*/
+    .l_container{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+        min-height: 100vh;
+        text-align: center;
+        gap: 0.2rem;
+        padding: 1rem;
+    }
+
+    #l_header {
+        font-size: clamp(3rem, 8vw, 6rem);
+        font-weight: 800;
+        color: var(--text-colour);
+        margin-bottom: 0.2rem;
+    }
+
+    #l_navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .landingOption {
+        font-size: clamp(1rem, 2vw, 1.5rem); 
+        text-decoration: none;
+        color: var(--text-colour);
+        transition: color 0.2s ease;
+    }
+
+    /* navbar mobile */
+    .navbar_container {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--base-colour);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .navbar_container #h_navbar {
+        display: none;
+    }
+    .navbar_container #h_navbar-logo
+    {
+        display: flex;
+        font-size: clamp(1.2rem, 1.5vw, 1.8rem); 
+        text-decoration: none;
+        color: var(--text-colour);
+        transition: color 0.2s ease;
+    }
+}
