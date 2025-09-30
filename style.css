@@ -185,6 +185,51 @@ body {
     .maincontainer #abt_p{
         font-size: 1.1rem;
     }
+
+        /* MUSIC PAGE */
+    .music-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 90%;
+        padding: 1.8rem;
+    }
+    .music-header{
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .music-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    padding: 2rem;
+    }
+
+    .album-card {
+    display: block;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .album-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    }
+
+    .album-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
 }
 
 @media screen and (max-width: 599px) {
