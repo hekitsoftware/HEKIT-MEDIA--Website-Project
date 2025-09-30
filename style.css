@@ -186,7 +186,7 @@ body {
         font-size: 1.1rem;
     }
 
-        /* MUSIC PAGE */
+    /* MUSIC PAGE */
     .music-group{
         display: flex;
         flex-direction: column;
@@ -410,5 +410,54 @@ body {
     }
     .maincontainer #abt_p{
         text-align: center;
+    }
+
+    /* MUSIC PAGE */
+    .music-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        padding: 1.8rem;
+    }
+    .music-header{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+        padding-left: 2rem;
+    }
+    .music-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+    }
+
+    .album-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .album-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    }
+
+    .album-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
 }
