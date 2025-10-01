@@ -186,6 +186,61 @@ body {
         font-size: 1.1rem;
     }
 
+    /* PROJECTS PAGE */
+    .maincontainer{
+        --projectPadding: 6vw;
+        padding-top: var(--projectPadding);
+        padding-bottom: var(--projectPadding);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .maincontainer #project-image-container{
+        display: flex;
+        flex-direction: column;
+        height: 20rem;
+        width: 20rem;
+    }
+    .maincontainer #project-text-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 40%;
+        padding: 1rem;
+    }
+    .maincontainer #project_h{
+        font-size: 2.3rem;
+    }
+    .maincontainer #project_sub{
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 500;
+    }
+    .maincontainer #project_p{
+        font-size: 1.1rem;
+        padding-top: 0.5rem;
+    }
+
+    a.button {
+        background-color: var(--base-varient);
+        border: 0.1rem solid var(--text-colour);
+        color: var(--text-colour);
+        padding: 10px 22px;
+        text-align: center;
+        display: inline-block;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 12px;
+        font-family: "MAP";
+        transition-duration: 0.3s;
+        text-decoration: none;
+    }
+    a.button:hover {
+        background-color: var(--text-colour);
+        color: var(--base-varient);
+    }
+
     /* MUSIC PAGE */
     .music-group{
         display: flex;
