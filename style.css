@@ -207,6 +207,7 @@ body {
         flex-direction: column;
         height: 30rem;
         width: 30rem;
+        mix-blend-mode: difference;
     }
     .maincontainer #about-text-container{
         display: flex;
@@ -275,29 +276,6 @@ body {
     a.button:hover {
         background-color: var(--text-colour);
         color: var(--base-varient);
-    }
-
-    /* GALLERY PAGE - GALLERY GRIDS*/
-    .image-group {
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: auto auto auto auto;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    width: 100%;
-    }
-
-    .image-card {
-    display: block;
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     /* MUSIC PAGE */
