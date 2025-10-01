@@ -80,6 +80,9 @@ body {
         position: relative;
         margin-top: auto;
     }
+    .footer #mobile-notice{
+    display: none;
+    }
 
     /*LANDING PAGE */
     .l_container{
@@ -287,7 +290,7 @@ body {
     }
 }
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 1030px) {
     /*L/D button mobil */
     .mode-button {
     position: fixed;
@@ -314,7 +317,21 @@ body {
     }
 
     .footer {
-    display: none;
+        width: 100%;
+        text-align: center;
+        padding: 2vw;
+        font-size: clamp(10px, 1.5vw, 14px);
+        color: var(--sub-text);
+        background-color: transparent;
+        position: relative;
+        margin-top: auto;
+    }
+    .footer #mobile-notice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(7px, 3vw, 14px);
+    color: var(--accent-colour);
     }
 
     /* landing mobile*/
@@ -384,10 +401,9 @@ body {
         color: var(--text-colour);
         height: 100vh;
         width: 100%;
-        max-width: 450px;
         position: fixed;
         top: 0;
-        right: -450px;
+        right: -1534px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -514,5 +530,57 @@ body {
     .album-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    /* PROJECTS PAGE */
+    .maincontainer{
+        --projectPadding: 6vw;
+        padding-top: var(--projectPadding);
+        padding-bottom: var(--projectPadding);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .maincontainer #project-image-container{
+        display: none;
+    }
+    .maincontainer #project-text-container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 70%;
+        padding: 1rem;
+    }
+    .maincontainer #project_h{
+        font-size: clamp(23px, 6vw, 30px);
+    }
+    .maincontainer #project_sub{
+        font-size: clamp(20px, 5vw, 25px);
+        font-style: italic;
+        font-weight: 500;
+    }
+    .maincontainer #project_p{
+        font-size: clamp(16px, 4vw, 20px);
+        padding-top: 0.5rem;
+    }
+
+    a.button {
+        background-color: var(--base-varient);
+        border: 0.1rem solid var(--text-colour);
+        color: var(--text-colour);
+        padding: 10px 22px;
+        text-align: center;
+        display: inline-block;
+        font-size: clamp(10px, 4vw, 15px);
+        cursor: pointer;
+        border-radius: 12px;
+        font-family: "MAP";
+        transition-duration: 0.3s;
+        text-decoration: none;
+    }
+    a.button:hover {
+        background-color: var(--text-colour);
+        color: var(--base-varient);
     }
 }
