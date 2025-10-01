@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js" defer></script>
     <title>GALLERY</title>
+    <!-- Page Note: This page has the most comments because it is the more technical of the pages, 
+     and as such i am still learning a lot of these techniques. -->
 </head>
     <body>
         <button class="mode-button" id="theme-switch">
@@ -23,7 +25,6 @@
                     <li><a href="index.html" class="navOption">HOME</a></li>
                     <li><a href="about.html" class="navOption">ABOUT</a></li>
                     <li><a href="music.html" class="navOption">MUSIC</a></li>
-                    <li><a href="art.html" class="navOption">ARTWORK</a></li>
                     <li><a href="projects.html" class="navOption">PROJECTS</a></li>
                     <li><a href="gallery.html" class="navOption">GALLERY</a></li>
                     <li><a href="extra.html" class="navOption">EXTRA</a></li>
@@ -38,11 +39,83 @@
             <div id="h_navbar">
                 <a href="about.html" class="navOption">About</a>
                 <a href="music.html" class="navOption">Music</a>
-                <a href="art.html" class="navOption">Artwork</a>
                 <a href="projects.html" class="navOption">Projects</a>
                 <a href="gallery.html" class="navOption" id="activeTab">Gallery</a>
                 <a href="extra.html" class="navOption">Extra</a>
             </div>
+        </div>
+
+        <!-- WHOLE COLLECTION -->
+        <div class ="widget">
+            <!-- TAB MANAGEMENT -->
+            <div class="tabs">
+                <!-- Tab 1 -->
+                <input type="radio" id="artworks" name="tabs" checked />
+                <label for="artworks">Artworks</label>
+
+                <!-- Tab 2 -->
+                <input type="radio" id="sketches" name="tabs" />
+                <label for="sketches">Sketches</label>
+
+                <!-- Tab 3 -->
+                <input type="radio" id="photos" name="tabs" />
+                <label for="photos">Photos</label>
+            </div>
+
+            <!-- TAB MANAGEMENT -->
+            <div class="tab-content">
+                <!-- ARTWORK -->
+                 <div class="tab-1">
+                    <div class="image-group">
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/090/145/667/large/joshua-jefferis-ybmk-group.jpg?1753052490" class="image-card">
+                        </div>
+
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/090/145/667/large/joshua-jefferis-ybmk-group.jpg?1753052490" class="image-card">
+                        </div>
+
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/090/145/667/large/joshua-jefferis-ybmk-group.jpg?1753052490" class="image-card">
+                        </div>
+                    </div>
+                 </div>
+
+                <!-- SKETCHES -->
+                 <div class="tab-2">
+                    <div class="image-group">
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/090/145/593/large/joshua-jefferis-ena-dreambbq.jpg?1753052177" class="image-card">
+                        </div>
+
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/090/145/593/large/joshua-jefferis-ena-dreambbq.jpg?1753052177" class="image-card">
+                        </div>
+
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/090/145/593/large/joshua-jefferis-ena-dreambbq.jpg?1753052177" class="image-card">
+                        </div>
+                    </div>
+                 </div>
+
+                <!-- PHOTOS -->
+                 <div class="tab-3">
+                    <div class="image-group">
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/088/672/045/large/joshua-jefferis-unfinishedvinylmockup.jpg?1748897558" class="image-card">
+                        </div>
+
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/088/672/045/large/joshua-jefferis-unfinishedvinylmockup.jpg?1748897558" class="image-card">
+                        </div>
+
+                        <div class="image-card">
+                            <img src="https://cdnb.artstation.com/p/assets/images/images/088/672/045/large/joshua-jefferis-unfinishedvinylmockup.jpg?1748897558" class="image-card">
+                        </div>
+                    </div>
+                 </div>
+            </div>
+
         </div>
 
         <div class="footer">
