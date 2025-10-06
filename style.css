@@ -319,7 +319,7 @@ body {
     }
 
     .album-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.13);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);
     }
 }
