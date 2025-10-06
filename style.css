@@ -15,6 +15,12 @@
     font-family: "MAP", sans-serif;  
 }
 
+/* for when tabbing through the pag */
+:focus {
+  outline: 3px solid var(--accent-colour);
+  outline-offset: 2px;
+}
+
 @font-face {
     font-family: 'MAP'; 
     src: url(fonts/Jost.ttf) format('truetype');
